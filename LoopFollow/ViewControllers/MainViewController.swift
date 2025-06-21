@@ -701,3 +701,10 @@ class MainViewController: UIViewController, UITableViewDataSource, ChartViewDele
         return max(topBG, topPredictionBG)
     }
 }
+override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+    super.viewWillTransition(to: size, with: coordinator)
+    coordinator.animate(alongsideTransition: { _ in
+        // Juster layout her hvis nødvendig
+        self.view.setNeedsLayout()
+    })
+}
