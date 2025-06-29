@@ -121,10 +121,3 @@ extension NightscoutViewController: WKNavigationDelegate, WKUIDelegate {
 
  
 }
-override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-    return [.portrait, .landscapeLeft, .landscapeRight]
-}
-
-override var shouldAutorotate: Bool {
-    return true
-}
